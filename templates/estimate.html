@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} Welcome to the estimate page {% endblock %}
+
+
+{% block body %} This page estimates vertical tank sizes
+
+<h2>Tank size calculator</h2>
+
+<form action="/add" method="POST">
+
+   
+
+
+
+<label for="radius">
+    radius: <input type="text" id="radius" name="radius" required autofocus>
+</label>
+<br></br>
+<label for="height">
+    height: <input type="text" id="height" name="height" required>
+</label>
+
+<input type="Submit" value="Add">
+
+</form>
+
+{% if myValue %}
+<p>The sum of two numbers is: {{ myValue }}</p>
+{% endif %}
+
+{% endblock %}
+
